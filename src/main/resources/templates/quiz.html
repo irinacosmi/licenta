@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/source/css/style.min.css}" />
+    <script th:src="@{/assets/js/min/contrib.min.js}"></script>
+</head>
+<body>
+<main role="main" class="container">
+    <img class="img-responsive center-block" id="" src="/images/header-4.png"  />
+    <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"  aria-valuemin="0"
+             aria-valuemax="100" th:attr="aria-valuenow=${responded}" th:style="'width:'+ ${responded}+'%;'" th:text="${responded} + '% Complete (success)'"></div>
+
+    </div>
+    <div class="starter-template row">
+        <form class="form-horizontal" th:action="@{/variante}" method="post">
+            <div class="form-group">
+                <input type="hidden" th:value="${question.id}" name="intrebareId" />
+                <fieldset>
+                    <legend><p id="question" th:text="${question.nume}"></p></legend>
+                    <ul style="list-style-type: none;">
+                        <li th:each="varianta: ${variante}">
+                            <input type="radio" th:value="${varianta.key}" name="varianta" />
+                            <label id="varianta" th:text="${varianta.value}"></label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <p><button type="submit" class="btn btn-primary">Raspund</button></p>
+        </form>
+    </div>
+
+</main>
+<!-- /.container -->
+
+</body>
+</html>

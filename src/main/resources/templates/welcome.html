@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/source/css/style.min.css}" />
+    <script th:src="@{/assets/js/min/contrib.min.js}"></script>
+</head>
+<body>
+<main role="main" class="container">
+    <img class="img-responsive center-block" id="" src="/images/header-4.png"  />
+    <h1 class="green">Află ce carieră ți se potrivește</h1>
+    <div class="new">
+        <p>În copilărie fiecare se imagina având diferite profesii însă momentul în care trebuie să alegem cu adevărat o profesie ne găsește șovăitori. Deciziile pot fi influențate de persoanele din jurul nostru, de trend-ul pieței, de posibilitatea obținerii unor avantaje financiare.</p>
+        <p> Deoarece găsirea unui echilibru e destul de dificilă, acest test vă ajută să vă descoperiți atuurile și profesiile care vi s-ar potrivi. Inventivitatea, spiritul de ordine şi disciplină, precum şi capacitatea de a transmite sarcini pot contura drumul spre împlinire. Profilul pe care-l veţi obţine răspunzând cu sinceritate la acest test vă poate recomanda pentru profesii ca <span class="bold_italic"> cercetător ştiinţific</span>, <span class="bold_italic">director general</span> sau <span class="bold_italic">strateg militar</span>.</p>
+        <p>La sfârșitul quiz-ului puneți mouse-ul pe diagrama unde ați obținut punctajul cel mai mare pentru a afla punctele dvs forte și profesiile care vi se potrivesc.</p>
+    </div>
+    <div class="starter-template row">
+        <div class="col-lg-6 col-lg-offset-3 text-center">
+            <img class="img-responsive center-block" id="startLogo" src="/images/start.gif" alt="Start quiz" />
+            <h2><a th:href="${'/q/' + {quiz}}">Start Quiz</a></h2>
+        </div>
+    </div>
+
+</main>
+<!-- /.container -->
+
+</body>
+</html>

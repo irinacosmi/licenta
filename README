@@ -1,0 +1,11 @@
+Irina's project
+
+#postgrsql configuration
+1. sudo -u postgres psql
+2. CREATE USER admin WITH PASSWORD '123';
+3. sudo -u postgres createdb project
+
+#js configuration
+1. npm init
+2. copy package.json dependencies
+3. npm install

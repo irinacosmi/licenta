@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/source/css/style.min.css}" />
+    <script th:src="@{/assets/js/min/contrib.min.js}"></script>
+    <script th:src="@{/assets/js/min/project.min.js}"></script>
+</head>
+<body>
+<main role="main" class="container">
+    <img class="img-responsive center-block" id="" src="/images/header-4.png"  />
+    <div class="starter-template-graph row">
+        <input type="hidden" th:value="${sessionId}" id="sessionId" />
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+</main>
+<!-- /.container -->
+
+</body>
+</html>
